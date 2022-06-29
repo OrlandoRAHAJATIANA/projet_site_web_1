@@ -1,0 +1,372 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /*  centrage automatique     */
+    /*width: 100%;
+    margin: auto;*/
+    /*                           */
+    /*border: 2px dashed rgb(79, 24, 182);*/
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas: "tete tete"
+                         "qui qui"
+                         "quoi quoi"
+                         "que que"                                           
+                         "comment ou"
+                         "pied pied";
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: 600px 1fr auto;
+    color: rgb(180, 159, 159);
+    padding: 0;
+    margin: 0;
+    
+}
+header{grid-area: tete;}
+#nous{grid-area: qui;}
+#service{grid-area: quoi;}
+#produit{grid-area: que;}
+#message{grid-area: comment;}
+#contact{grid-area: ou;}
+footer{grid-area: pied;}
+p{
+    margin: 2px 5px;
+}
+
+/* structure du menu de navigation*/
+
+header{
+    /*max-height: max-content;*/
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    /*background-attachment: local;*/
+    /*border-radius: 15px;*/
+    width: 100%;
+    
+    
+}
+/*header h1{
+    text-align: left;
+    margin-top: 200px;
+    color: rgb(80, 21, 21);
+    padding-left: 20px;
+}*/
+h3{
+    font-family: Dancing Script, cursive;
+    color: black;
+    /*text-shadow: 1px 3px 2px black;*/
+}
+
+
+.cont1{
+    /*   centrage automatique    */
+    /*width: 90%;*/
+    list-style: none;
+    margin: auto;
+    background-color: rgba(14, 8, 5, 0.5);
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: center;/*position suivant le colonnes*/
+    align-items: center;/*position suivant le lignes*/
+    border-radius: 100px;
+    position: relative;
+    /*width: 95%;*/
+    overflow: hidden;
+}
+.item1{
+    /*flex-grow: 2;*/
+    width: 12%;
+    padding: 12px 0px;
+    margin: 2px;
+    /*align-items: center;*/
+    font-size: 1.2em;    
+}
+.item1:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+a{
+    
+    color: whitesmoke;
+    text-decoration: none;
+} 
+
+
+/* structure Qui sommes nous */
+
+#nous{
+    /*   centrage automatique    */
+    /*width: 90%;
+    margin: auto;*/
+    /*                           */
+    /* */
+    background-color: rgba(48, 19, 4, 0.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*flex-wrap: wrap;*/
+    margin-top: 50px;
+    border-radius: 15px; 
+}
+/* concerne toute les images*/
+img{
+    border-radius: 16px;
+    width: 80%;
+    margin: 5px;
+    height: auto;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.7);
+}
+
+/* comportement au survol */
+img:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+#nous img{
+    max-width: 40%;
+    min-width: 20%;
+}
+.item2{
+    padding: 10px;
+    max-height: 500px;
+    /* */
+    margin-left: 10px;
+    min-width: 55%;
+}
+h1{
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+
+
+/* structure service */
+#service h1, #produit h1, #message h1, #contact h1{
+    /* */
+    background-color: rgba(48, 19, 4, 0.8);
+    width: max-content;
+    margin: 30px auto 10px auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Dancing Script, cursive;
+    color: black;
+    text-shadow: 1px 3px 2px wheat;
+}
+
+.cont3{
+    /*   centrage automatique    */
+    /*width: 90%;
+    margin: auto;*/
+    /*                           */
+    border: 2px double rgba(48, 19, 4, 0.9);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: scroll;
+
+}
+.item3{
+    max-width: 23%;
+    min-width: 290px;
+    background-color: rgba(48, 19, 4, 0.9);
+    margin: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* structure produit */
+.cont4{
+    /*   centrage automatique    */
+    /*width: 200px;
+    margin: auto;*/
+    /*                           */
+    /* */
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    /*grid-template-columns: 290px 290px 290px 290px*/
+    grid-template-rows: max-content max-content;
+    justify-content: space-evenly;
+    align-items: stretch;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-areas: "o1 o2 o3 o3"
+                         "o4 o4 o5 o6";
+    
+                                            /* important be: */               /*overflow: scroll;*/
+}
+.ordre1{grid-area: o1;}
+.ordre2{grid-area: o2;}
+.ordre3{grid-area: o3;}
+.ordre4{grid-area: o4;}
+.ordre5{grid-area: o5;}
+.ordre6{grid-area: o6;}
+
+
+
+.item4{
+    /* */
+    background-color: rgba(48, 19, 4, 0.9);
+    text-align: center;
+    border-radius: 15px;
+}
+
+.item4 img{
+    width: 80%;
+    margin: 5px;
+    height: 450px;
+    min-height: 300px;
+}
+
+/* structure message */
+/*#message{
+    display: none;
+}*/
+
+fieldset{
+    color: rgba(48, 19, 4, 0.9);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    /*text-align: left;*/
+}
+input, label{
+    height:20px;
+}
+label, #send_button{
+    font-size: 1.2em;
+    margin: 2px;
+}
+#send_button{
+    width: fit-content;
+    align-self: center;
+    height: 40px;
+    color: whitesmoke;
+    background-color: rgba(48, 19, 4, 0.7);
+}
+
+/* structure contact */
+
+.cont5{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px double rgba(48, 19, 4, 0.7);
+    border-radius: 15px;
+    margin: 5px;
+    color: rgba(48, 19, 4, 0.9);
+    font-size: 1.2em;
+}
+.cont5 img{
+    max-width: 420px;
+    max-height: 250px;
+}
+.c1{
+    list-style: url(img/c1.jpg);
+}
+.c2{
+    list-style: url(img/c2.jpg);
+}
+.c3{
+    list-style: url(img/c3.jpg);
+    align-self: flex-end;
+}
+.c4{
+    list-style: url(img/c4.jpg);
+    align-self: flex-end;
+}
+
+.cont6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 2px double rgba(48, 19, 4, 0.7);
+    padding: 30px;
+    box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.7);
+}
+.cont6:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+
+/*      footer      */
+footer{
+    font-size: smaller;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: black;
+}
+
+/* media queries */
+@media(max-width:663px){
+    .item1{
+        /*flex-grow: 2;*/
+        width: auto;
+        padding: 12px 0px;
+        margin: 2px;
+        /*align-items: center;*/
+        font-size: 0.7em;    
+    }
+    .special{
+        max-width: 10%;
+    }
+}
+@media(max-width:566px){
+    body{
+        grid-template-areas: "tete"
+                         "qui"
+                         "quoi"
+                         "que"                                           
+                         "comment" 
+                         "ou"
+                         "pied";
+    grid-template-columns: 1fr;
+    }
+    #nous{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cont4{
+        /*   centrage automatique    */
+        /*width: 200px;
+        margin: auto;*/
+        /*                           */
+        /* */
+        display: grid;
+        grid-template-columns: 40% 40%;
+        /*grid-template-columns: 290px 290px 290px 290px*/
+        grid-template-rows: max-content max-content;
+        justify-content: space-evenly;
+        align-items: stretch;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-areas: "o1 o2"
+                             "o3 o3"
+                             "o4 o4"
+                             "o5 o6";
+        
+                                                                /* important be: */               /*overflow: scroll;*/
+    }
+    #contact img{
+        width: 30%;
+        height: auto;
+    }
+}
+@media(max-width:480px){
+    .cont4{
+        grid-template-areas: "o1"
+                             "o2"
+                             "o3"
+                             "o4"
+                             "o5" 
+                             "o6";
+    }
+}
